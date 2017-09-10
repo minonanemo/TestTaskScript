@@ -45,7 +45,7 @@ class DataMaster implements DataReceiver
    */
   private function convertToNumeric(array $arr) {
     return array_map(function($item) {
-      return is_numeric($item) ? (int)$item : false;
+      return is_numeric($item) ? (float)$item : false;
     }, $arr);
   }
   

@@ -11,7 +11,7 @@ class MathChecker implements SequenceChecker
     $this->itemsNumber = count($sequence);
     if ($this->itemsNumber < 3) { return true; }
     if (in_array(false, $sequence, true)) { return true; }
-    if (($sequence[1] === 0) && ($sequence[2] === 0)) { return true; }
+    if (($sequence[1] === 0.0) && ($sequence[2] === 0.0)) { return true; }
     return false;
   }
   
@@ -41,12 +41,12 @@ class MathChecker implements SequenceChecker
   {
     if ($this->isImproperForProgression($sequence )) { return false; }
   
-    if ($sequence[1] === 0) {
+    if ($sequence[1] === 0.0) {
       return false;
     }
     $divider =  $sequence[2] / $sequence[1];
     for ($i=3; $i<$this->itemsNumber; $i++) {
-      if (($sequence[$i-1] === 0) || (($sequence[$i] / $sequence[$i-1]) !== $divider)) {
+      if (($sequence[$i-1] === 0.0) || (($sequence[$i] / $sequence[$i-1]) !== $divider)) {
         return false;
       }
     }
