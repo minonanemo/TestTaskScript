@@ -24,9 +24,7 @@ class DataMaster implements DataReceiver
     if ($this->argumentsCount <= 1) {
       return false;
     }
-    else {
-      return $this->getArrayFromData();
-    }
+    return $this->getArrayFromData();
   }
   
   /**

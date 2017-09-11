@@ -20,7 +20,7 @@ foreach ($master->numericCollection as $singleSequence) {
   $arithmetic = $investigator->isArithmeticProgression($singleSequence);
   $geometric = $investigator->isGeometricProgression($singleSequence);
   if (!$arithmetic && !$geometric) {
-    echo $singleSequence[0]." is neither arithmetic nor geometric progression.";
+    echo $singleSequence[0].' is neither arithmetic nor geometric progression.';
   }
   echo $arithmetic;
   echo $geometric;
